@@ -1,0 +1,26 @@
+{
+  "name": "@nelreina/cra-template-firebase",
+  "version": "0.0.4",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template"
+  ],
+  "description": "nelreina Create React App Template for Firebase project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelreina/cra-template-firebase.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/nelreina/cra-template-firebase/issues"
+  },
+  "main": "template.json",
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
