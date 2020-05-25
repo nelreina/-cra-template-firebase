@@ -4,6 +4,6 @@
 
 
 ```
-$ npx create-react-app --template @nelreina/cra-template-firebase <project-name>
+$ npx create-react-app --template @nelreina/firebase <project-name>
 ```
 
