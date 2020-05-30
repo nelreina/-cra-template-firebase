@@ -20,6 +20,8 @@
       "react-app-rewire-hot-loader": "^2.0.1",
       "react-app-rewired": "^2.1.6",
       "react-hot-loader": "^4.12.21",
+      "react-firebaseui": "^4.1.0",
+      "reactfire": "^2.0.3",
       "react-router": "^5.1.2",
       "react-router-dom": "^5.1.2",
       "recharts": "^1.8.5"

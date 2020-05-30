@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { hot } from "react-hot-loader";
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+
 
 import './App.css';
+import Landing from './pages/Landing';
+import Loading from './components/Loading';
+import Dashboard from './pages/Dashboard';
+import { AuthCheck } from 'reactfire';
 
 const App = () => {
 
   return (
-    <>
-      <h1>Create React App Template</h1>
-    </>
+    <Suspense fallback={<Loading />}>
+      <Router>
+        <AuthCheck fallback={<Redirect to="/" />}>
+          <Route exact path="/dashboard" component={Dashboard} />
+
+        </AuthCheck>
+
+
+        <Route exact path="/" component={Landing} />
+      </Router>
+    </Suspense>
   );
 }
 
