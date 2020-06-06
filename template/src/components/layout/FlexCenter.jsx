@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const FlexCenter = ({ children, height = "100%" }) => {
+const FlexCenter = ({ children, height = "100%", direction = "column" }) => {
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height
-    }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: direction,
+        height,
+      }}
+    >
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default FlexCenter
+export default FlexCenter;
