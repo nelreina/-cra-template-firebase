@@ -1,13 +1,13 @@
 import React from "react";
 
-const FlexCenter = ({ children, height = "100%", direction = "column" }) => {
+const FlexCenter = ({ children, column, height = "100%" }) => {
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: direction,
+        flexDirection: column ? "column" : "row",
         height,
       }}
     >
