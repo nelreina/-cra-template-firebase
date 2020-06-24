@@ -7,7 +7,7 @@ import { useHistory } from "react-router";
 const MainNavigation = () => {
   const history = useHistory();
 
-  const navigateTo = (route) => history.replace(route);
+  const navigateTo = (route) => history.push(route);
 
   return (
     <List>
@@ -17,11 +17,11 @@ const MainNavigation = () => {
         </ListItemIcon>
         <ListItemText primary={"Dashboard"} />
       </ListItem>
-      <ListItem button onClick={() => navigateTo("/formik")}>
+      <ListItem button onClick={() => navigateTo("/users")}>
         <ListItemIcon>
           <ListAltIcon />
         </ListItemIcon>
-        <ListItemText primary={"Formik Page"} />
+        <ListItemText primary={"Users"} />
       </ListItem>
     </List>
   );

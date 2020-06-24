@@ -1,8 +1,13 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import { Button, LinearProgress, Card, CardContent } from "@material-ui/core";
-import TextField from "../components/forms/AppTextField";
-const FormExample = ({ call, initialValues }) => {
+const AppForm = ({
+  children,
+  call = (values) => {
+    alert(JSON.stringify(values, null, 2));
+  },
+  init,
+}) => {
   const submit = (values, { setSubmitting }) => {
     setTimeout(async () => {
       await call(values);
@@ -13,23 +18,10 @@ const FormExample = ({ call, initialValues }) => {
     <Card>
       <CardContent>
         <h4>Form Example</h4>
-        <Formik
-          initialValues={{
-            name: "",
-            job: "",
-          }}
-          onSubmit={submit}
-        >
+        <Formik initialValues={init} onSubmit={submit}>
           {({ submitForm, isSubmitting }) => (
             <Form>
-              <Field
-                component={TextField}
-                name="name"
-                type="text"
-                label="Name"
-              />
-              <br />
-              <Field component={TextField} type="text" label="Job" name="job" />
+              {children}
               {isSubmitting && <LinearProgress />}
               <br />
               <Button
@@ -48,4 +40,4 @@ const FormExample = ({ call, initialValues }) => {
   );
 };
 
-export default FormExample;
+export default AppForm;

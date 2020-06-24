@@ -8,7 +8,7 @@ import Loading from "./components/Loading";
 import Dashboard from "./pages/Dashboard";
 
 import { AuthCheck } from "reactfire";
-import FormikPage from "./pages/FormikPage";
+import FormikPage from "./pages/Users";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <AuthCheck fallback={<Redirect to="/" />}>
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/formik" component={FormikPage} />
+          <Route exact path="/users" component={FormikPage} />
         </AuthCheck>
 
         <Route exact path="/" component={Landing} />
