@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MenuAppBar = ({ className }) => {
+const MenuAppBar = ({ className, title }) => {
   const classes = useStyles();
   const user = useUser();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -42,7 +42,7 @@ const MenuAppBar = ({ className }) => {
       <AppBar position="fixed" className={className}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            nelreina.tech
+            {title}
           </Typography>
           {user && (
             <div>
